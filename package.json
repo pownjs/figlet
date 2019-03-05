@@ -1,0 +1,47 @@
+{
+  "name": "@pown/figlet",
+  "version": "2.0.0",
+  "description": "Pownage guaranteed",
+  "main": "lib/index.js",
+  "scripts": {
+    "figlet": "POWN_ROOT=. pown-cli figlet",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pownjs/pown-figlet.git"
+  },
+  "keywords": [
+    "exploit",
+    "framework"
+  ],
+  "author": "pdp <pdp@gnucitizen.org>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pownjs/pown-figlet/issues"
+  },
+  "homepage": "https://github.com/pownjs/pown-figlet#readme",
+  "devDependencies": {
+    "@pown/cli": "^2.12.3",
+    "@pown/toolchain": "^2.0.0"
+  },
+  "dependencies": {
+    "figlet": "^1.2.1"
+  },
+  "pown": {
+    "commands": [
+      "lib/commands/figlet.js"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "extends": "./.babelrc"
+        }
+      ]
+    ]
+  }
+}
